@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <div class="clicker">
+            <div class="titulo">
+                <img src="midia/bmw_logo_PNG19707.png" alt="logo-bmw">
+                <p>BMW Clicker</p>
+            </div>
+            <div class="balance">
+                <p class="coin-name">Bmw Coins</p>
+                <div class="balance-coins">
+                    <img src="midia/bmw coin.png" alt="Bmw coin">
+                    <p id="balance">0</p>
+                </div>
+            </div>
+            <div class="bmw">
+                <!--tem que fazer uma função de JS para alterar esta IMG toda vez que você faz um upgrade e troca o carro no fundo-->
+                <img id="currentCar" src="midia/e36 velha.png" alt="Bmw e36" class="bmw-e36" onclick="add1Coin()">
+            </div>
+        </div>
+        <div class="upgrades-background">
+            <div class="lista-upgrades">
+                <p>Melhore sua BMW!</p>
+            </div>
+            <div class="upgrades-bmw">
+                <!--Na class abaixo, existe a class current. A class current só aparece caso você tenha comprado o carro. Funçãozinha de JS para manipular HTML. Ela altera o background para um gradiente de azul para branco-->
+                <div id="upgrade01" class="upgrades current">
+                    <!--Na class da img de baixo, tem 2 class, a "lock", para quando o carro está bloqueado (sem não comprou ainda) e "carro" para quando você compra o carro. A class "carro" só aparece através da ativação de uma função de manipulação de HTML pelo Javascript. Ela muda src da imagem do cadeado para a BMW do upgrade, além de atualizar o alt.-->
+                    <img id="miniatura-upgrade-e36" class="lock carro" src="midia/e36 velha.png" alt="bmwe36">
+                    <div class="upgrades-info">
+                         <p class="upgrade-name">BMW 325i E36 1995</p>
+                         <p class="upgrade-description">1 BMW Coin por clique</p>
+                         <!--Na class de baixo tem a class bought que serve para tirar o preço do upgrade depois que você compra. Aparece com manipulação de HTML com JS-->
+                         <p id="upgrade01-cost" class="upgrade-cost bought">100 BMW Coins</p>
+                    </div>
+                </div>
+                <div id="upgrade02" class="upgrades" onclick="buy320i()">
+                   <img id="miniatura-upgrade-320i" class="lock" src="midia/cadeado.png" alt="Cadeado">
+                   <div class="upgrades-info">
+                        <p class="upgrade-name">BMW 320i E90 2008</p>
+                        <p class="upgrade-description">5 BMW Coins por segundo</p>
+                        <p id="upgrade02-cost" class="upgrade-cost">100 BMW Coins</p>
+                   </div>
+                </div>
+                <div id="upgrade03" class="upgrades" onclick="buyM3()">
+                    <img id="miniatura-upgrade-m3" class="lock" src="midia/cadeado.png" alt="Cadeado">
+                    <div class="upgrades-info">
+                         <p class="upgrade-name">BMW M3 F80 2018</p>
+                         <p class="upgrade-description">2 BMW Coins por clique</p>
+                         <p id="upgrade03-cost" class="upgrade-cost">150 BMW Coins</p>
+                    </div>
+                </div>
+                <div id="upgrade04" class="upgrades" onclick="buyX6()">
+                    <img id="miniatura-upgrade-x6" class="lock" src="midia/cadeado.png" alt="Cadeado">
+                    <div class="upgrades-info">
+                         <p class="upgrade-name">BMW X6 Competition 2024</p>
+                         <p class="upgrade-description">10 BMW Coins por segundo</p>
+                         <p id="upgrade04-cost" class="upgrade-cost">200 BMW Coins</p>
+                    </div>
+                </div>
+                <div id="upgrade05" class="upgrades" onclick="buyM8()">
+                    <img id="miniatura-upgrade-m8" class="lock" src="midia/cadeado.png" alt="Cadeado">
+                    <div class="upgrades-info">
+                         <p class="upgrade-name">BMW M8 Coupe 2024</p>
+                         <p class="upgrade-description">3 BMW Coins por clique</p>
+                         <p id="upgrade05-cost" class="upgrade-cost">250 BMW Coins</p>
+                    </div>
+                </div>
+                <div id="upgrade06" class="upgrades" onclick="buyNazca()">
+                    <img id="miniatura-upgrade-nazca" class="lock" src="midia/cadeado.png" alt="Cadeado">
+                    <div class="upgrades-info">
+                         <p class="upgrade-name">BMW Nazca M12</p>
+                         <p class="upgrade-description">?????????????</p>
+                         <p id="upgrade06-cost" class="upgrade-cost">500 BMW Coins</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
