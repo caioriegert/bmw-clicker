@@ -1,2 +1,2 @@
 # bmw-clicker
-Trabalho da faculdade - Produzir um jogo de clicker tipo dogeminer
+Trabalho rápido da faculdade - Produzir um jogo de clicker no mesmo estilo do dogeminer.
