@@ -23,7 +23,7 @@ const upgrade04cost = document.getElementById('upgrade04-cost')
 const upgrade05cost = document.getElementById('upgrade05-cost')
 const upgrade06cost = document.getElementById('upgrade06-cost')
 
-let balance = 1000;
+let balance = 0;
 let coinClique = 1;
 let coinsPorSegundo = 0;
 
